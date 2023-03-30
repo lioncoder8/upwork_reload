@@ -1,0 +1,29 @@
+{
+  "name": "my Milestones",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "description": "Automatically refresh the page on a set interval",
+  "permissions": ["scripting","activeTab", "storage", "tabs","declarativeNetRequestWithHostAccess"],
+  
+  "action": {
+    "default_title": "Drink Water Event",
+    "default_popup": "popup.html"
+  },
+  
+  "host_permissions": [
+    "http://*/", 
+    "https://*/"
+  ],
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  }
+}
